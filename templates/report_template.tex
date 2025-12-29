@@ -1,0 +1,83 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{pgfplots}
+\usepackage{ulem}
+\usepackage{circuitikz}
+\usepackage{float}
+\pgfplotsset{width=10cm, compat=1.17}
+\geometry{
+	paper=a4paper, 
+	inner=3cm,
+	outer=3cm,
+	bindingoffset=.5cm, 
+	top=2cm, 
+	bottom=2cm, 
+}
+\graphicspath{ {./images/} }
+\newcommand{\source}[1]{\caption*{Fonte: {#1}} }
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \Large
+        Universidade de São Paulo
+        \vspace*{1cm}
+
+        \includegraphics[scale=0.75]{images/ifsc_logo.png} \\
+        \Huge
+        \textbf{[Atividade]} \\
+        \huge
+        [Título]
+        
+        \Large
+        [Disciplina]
+
+        \vspace{4cm}
+        \Large
+        
+    \end{center}
+    
+    \begin{flushright}
+        \Large
+        \textbf{Aluno [ou Alunos]}\\
+        \large
+            [Seu nome] n° [Seu número usp]
+    \end{flushright}
+    
+    \vspace*{\fill}
+    \centering \large São Carlos \\ 2024
+    
+\end{titlepage}
+
+\section{Objetivos}
+
+\section{Introdução}
+\subsection{Aqui, abra quantas subseções forem necessárias para introduzir o conteúdo teórico de seu Relatório}
+
+\section{Metodologia e Resultados}
+\subsection{[Aqui, abra quantas subseções forem necessárias para elaborar sobre todos os assuntos de seu Relatório]}
+
+
+\begin{figure}[h!]
+    \centering
+    % Aqui você puxa a imagem única que o Python gerou
+    \includegraphics[width=0.8\textwidth]{images/fit_plot.png}
+    
+    % A legenda explica as duas partes
+    \caption{
+        Ajuste linear dos dados experimentais de Voltagem vs. Frequência. 
+        \textbf{Superior:} Os pontos pretos indicam os dados com barras de erro e a linha vermelha o modelo ajustado ($V = af + b$). 
+        \textbf{Inferior:} Gráfico de resíduos ($Y_{exp} - Y_{modelo}$). A distribuição aleatória em torno de zero indica um bom ajuste estatístico.
+    }
+    \label{fig:analise_completa}
+\end{figure}
+\section{Conclusão}
+
+
+\end{document}
