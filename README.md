@@ -1,32 +1,32 @@
-# Laboratório Avançado de Física - IFSC/USP
+# Advanced Physics Lab Toolkit - IFSC/USP
 
-Ferramentas de automação e análise estatística rigorosa para a disciplina de Laboratório Avançado.
+High-performance automation and statistical analysis toolkit designed for the Advanced Laboratory course at the Institute of Physics of São Carlos (IFSC/USP).
 
-Este projeto visa eliminar o trabalho repetitivo de formatação e cálculo, permitindo foco total na física e na análise de dados. Ele utiliza **Python (Scipy)** para ajustes não-lineares (Mínimos Quadrados Ponderados) e **LaTeX** para geração de relatórios profissionais.
+This project streamlines the scientific workflow by automating folder structures, performing rigorous non-linear least squares fitting (weighted), and generating publication-quality LaTeX reports. It eliminates manual formatting overhead, allowing a total focus on physics and data interpretation.
 
-## 🚀 Funcionalidades
+## 🚀 Features
 
-* **Automação de Workflow:** Script `new_exp.py` cria a estrutura completa de pastas para novos experimentos em segundos.
-* **Análise Estatística Robusta:**
-    * Ajuste de curvas usando `scipy.optimize.curve_fit` (considerando erros em Y).
-    * Cálculo automático de **Qui-Quadrado Reduzido** ($\chi^2_{red}$).
-    * Geração de **Matriz de Covariância** para propagação de incertezas nos parâmetros.
-* **Plotagem Profissional:** Gera uma figura única contendo o ajuste do modelo e a análise de resíduos (obrigatório para validação do modelo físico).
-* **Relatórios LaTeX:** Template pré-configurado nas normas, pronto para inserir os gráficos gerados.
+* **Workflow Automation:** `new_exp.py` script instantly scaffolds new experiment directories with all necessary templates.
+* **Robust Statistical Analysis:**
+    * Non-linear curve fitting using `scipy.optimize.curve_fit` (Weighted Least Squares).
+    * Automatic calculation of **Reduced Chi-Squared** ($\chi^2_{red}$) for goodness-of-fit validation.
+    * Parameter uncertainty propagation via the Covariance Matrix.
+* **Professional Visualization:** Generates dual-panel figures (Model Fit + Residuals) to detect systematic errors.
+* **LaTeX Integration:** Pre-configured ABNT/IFSC templates ready for compilation.
 
-## 📂 Estrutura do Repositório
+## 📂 Repository Structure
 
 ```text
 /
-├── new_exp.py             # Script de automação (Cria novos experimentos)
-├── templates/             # Arquivos base
-│   ├── base_script.py     # Script Python com cálculo de Chi2 e Resíduos
-│   └── report_template.tex # Template LaTeX limpo
+├── new_exp.py             # Automation script (Scaffolds new experiments)
+├── templates/             # Core templates
+│   ├── base_script.py     # Python analysis engine (Fit + Residuals + Chi2)
+│   └── report_template.tex # LaTeX report boilerplate
 │
-├── exp01-exemplo/         # (Exemplo de pasta gerada)
-│   ├── analysis.py        # Script de análise específico
-│   ├── data.csv           # Dados brutos
-│   ├── fit_plot.png       # Gráfico gerado (Ajuste + Resíduos)
-│   └── report.tex         # Relatório final
+├── exp01-example/         # (Generated folder structure)
+│   ├── analysis.py        # Experiment-specific script
+│   ├── data.csv           # Raw experimental data
+│   ├── fit_plot.png       # Generated figure
+│   └── report.tex         # Final report source
 │
 └── README.md
